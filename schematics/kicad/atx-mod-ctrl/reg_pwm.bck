@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SG2524
+D Regulating Pulse Width Modulators
+K SMPS PWM Controller
+F http://www.ti.com/lit/ds/symlink/sg2524.pdf
+$ENDCMP
+#
+$CMP SG3527
+D Regulating Pulse Width Modulators, OR Logic, PDIP-16/SOIC-16
+K SMPS PWM Controller
+F https://www.microsemi.com/document-portal/doc_view/11120-sg1525a-sg1527a-datasheet
+$ENDCMP
+#
+#End Doc Library

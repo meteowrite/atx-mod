@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name reg_pwm)(type Legacy)(uri ${KIPRJMOD}/reg_pwm.lib)(options "")(descr ""))
+)
