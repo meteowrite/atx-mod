@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:atx-mod-ctrl-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,14 +15,282 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L reg_pwm:SG2524 U?
+L reg_pwm:SG2524 U1
 U 1 1 5CE98158
-P 5100 3300
-F 0 "U?" H 5100 4181 50  0000 C CNN
-F 1 "SG2524" H 5100 4090 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5950 2650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sg2524.pdf" H 5100 3300 50  0001 C CNN
-	1    5100 3300
+P 7000 3300
+F 0 "U1" H 7000 4181 50  0000 C CNN
+F 1 "SG2524" H 7000 4090 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 7850 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sg2524.pdf" H 7000 3300 50  0001 C CNN
+	1    7000 3300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7500 3650 7800 3650
+Wire Wire Line
+	7800 3650 7800 3750
+Wire Wire Line
+	7800 4250 7000 4250
+$Comp
+L power:GND #PWR03
+U 1 1 5CEAA80D
+P 7000 4250
+F 0 "#PWR03" H 7000 4000 50  0001 C CNN
+F 1 "GND" H 7005 4077 50  0000 C CNN
+F 2 "" H 7000 4250 50  0001 C CNN
+F 3 "" H 7000 4250 50  0001 C CNN
+	1    7000 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7000 4250
+Wire Wire Line
+	7500 3750 7800 3750
+Wire Wire Line
+	7500 3400 8050 3400
+Wire Wire Line
+	7500 3500 8050 3500
+Wire Wire Line
+	6500 3750 6400 3750
+Wire Wire Line
+	6400 3750 6400 3900
+Wire Wire Line
+	7800 3750 7800 4250
+Connection ~ 7800 3750
+Wire Wire Line
+	7000 4000 7000 4250
+Wire Wire Line
+	6500 3650 6050 3650
+Wire Wire Line
+	6050 3650 6050 3900
+$Comp
+L Device:R R1
+U 1 1 5CEAE0FB
+P 6050 4050
+F 0 "R1" H 6120 4096 50  0000 L CNN
+F 1 "1.5k" H 6120 4005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5980 4050 50  0001 C CNN
+F 3 "~" H 6050 4050 50  0001 C CNN
+	1    6050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5CEAC438
+P 6050 4250
+F 0 "#PWR01" H 6050 4000 50  0001 C CNN
+F 1 "GND" H 6055 4077 50  0000 C CNN
+F 2 "" H 6050 4250 50  0001 C CNN
+F 3 "" H 6050 4250 50  0001 C CNN
+	1    6050 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4200 6050 4250
+$Comp
+L Device:C C1
+U 1 1 5CEAB69A
+P 6400 4050
+F 0 "C1" H 6515 4096 50  0000 L CNN
+F 1 "68n" H 6515 4005 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6438 3900 50  0001 C CNN
+F 3 "~" H 6400 4050 50  0001 C CNN
+	1    6400 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5CEAEEB9
+P 6400 4250
+F 0 "#PWR02" H 6400 4000 50  0001 C CNN
+F 1 "GND" H 6405 4077 50  0000 C CNN
+F 2 "" H 6400 4250 50  0001 C CNN
+F 3 "" H 6400 4250 50  0001 C CNN
+	1    6400 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4250 6400 4200
+Wire Wire Line
+	5850 3350 5850 3400
+Wire Wire Line
+	5850 3700 5650 3700
+$Comp
+L Device:C C2
+U 1 1 5CEAFAEE
+P 5850 3200
+F 0 "C2" H 5965 3246 50  0000 L CNN
+F 1 "68n" H 5965 3155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 5888 3050 50  0001 C CNN
+F 3 "~" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3050 5850 3000
+Wire Wire Line
+	5850 3000 6500 3000
+Wire Wire Line
+	6500 3400 5850 3400
+Connection ~ 5850 3400
+Wire Wire Line
+	5850 3400 5850 3700
+Text GLabel 1300 2750 0    50   Input ~ 0
+Vout
+Wire Wire Line
+	1300 2750 1550 2750
+$Comp
+L Amplifier_Operational:LM358 U2
+U 1 1 5CEB1773
+P 3150 3000
+F 0 "U2" H 3150 3367 50  0000 C CNN
+F 1 "LM358" H 3150 3276 50  0000 C CNN
+F 2 "" H 3150 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3150 3000 50  0001 C CNN
+	1    3150 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U2
+U 2 1 5CEB1B35
+P 3100 4450
+F 0 "U2" H 3100 4817 50  0000 C CNN
+F 1 "LM358" H 3100 4726 50  0000 C CNN
+F 2 "" H 3100 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3100 4450 50  0001 C CNN
+	2    3100 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U2
+U 3 1 5CEB2C58
+P 3300 1750
+F 0 "U2" H 3258 1796 50  0000 L CNN
+F 1 "LM358" H 3258 1705 50  0000 L CNN
+F 2 "" H 3300 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3300 1750 50  0001 C CNN
+	3    3300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 5CEC0438
+P 3900 3000
+F 0 "D2" H 3900 3216 50  0000 C CNN
+F 1 "1N4148" H 3900 3125 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3900 2825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3900 3000 50  0001 C CNN
+	1    3900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5CEC2508
+P 3850 4450
+F 0 "D1" H 3850 4666 50  0000 C CNN
+F 1 "1N4148" H 3850 4575 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3850 4275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3850 4450 50  0001 C CNN
+	1    3850 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4450 4350 4450
+Wire Wire Line
+	4350 4450 4350 3000
+Wire Wire Line
+	4050 3000 4350 3000
+Connection ~ 5850 3000
+Wire Wire Line
+	4350 3000 4800 3000
+Connection ~ 4350 3000
+Wire Wire Line
+	3450 3000 3750 3000
+Wire Wire Line
+	3400 4450 3700 4450
+Wire Wire Line
+	7500 2800 8450 2800
+Wire Wire Line
+	8450 2800 8450 1750
+Wire Wire Line
+	8450 1750 4350 1750
+$Comp
+L Device:R R2
+U 1 1 5CECA129
+P 4350 2700
+F 0 "R2" H 4420 2746 50  0000 L CNN
+F 1 "10k" H 4420 2655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4280 2700 50  0001 C CNN
+F 3 "~" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2850 4350 3000
+Wire Wire Line
+	4350 1750 4350 2550
+$Comp
+L Transistor_BJT:BC557 Q1
+U 1 1 5CECC989
+P 4900 3650
+F 0 "Q1" H 5091 3604 50  0000 L CNN
+F 1 "BC557" H 5091 3695 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5100 3575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 4900 3650 50  0001 L CNN
+	1    4900 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 3450 4800 3000
+Wire Wire Line
+	4800 3000 5850 3000
+Wire Wire Line
+	4800 3850 4800 4250
+$Comp
+L power:GND #PWR0101
+U 1 1 5CECF33A
+P 4800 4250
+F 0 "#PWR0101" H 4800 4000 50  0001 C CNN
+F 1 "GND" H 4805 4077 50  0000 C CNN
+F 2 "" H 4800 4250 50  0001 C CNN
+F 3 "" H 4800 4250 50  0001 C CNN
+	1    4800 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3650 5200 3650
+Wire Wire Line
+	5200 3650 5200 3850
+$Comp
+L Device:LED D3
+U 1 1 5CED0BDB
+P 5200 4000
+F 0 "D3" V 5239 3883 50  0000 R CNN
+F 1 "LED" V 5148 3883 50  0000 R CNN
+F 2 "" H 5200 4000 50  0001 C CNN
+F 3 "~" H 5200 4000 50  0001 C CNN
+	1    5200 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 4150 5200 4250
+$Comp
+L power:GND #PWR0102
+U 1 1 5CED1B6B
+P 5200 4250
+F 0 "#PWR0102" H 5200 4000 50  0001 C CNN
+F 1 "GND" H 5205 4077 50  0000 C CNN
+F 2 "" H 5200 4250 50  0001 C CNN
+F 3 "" H 5200 4250 50  0001 C CNN
+	1    5200 4250
+	1    0    0    -1  
+$EndComp
+Text Label 7650 2800 0    50   ~ 0
+VREF
+Wire Wire Line
+	3200 1450 3200 1300
+Text Label 3200 1400 0    50   ~ 0
+VREF
+Connection ~ 4800 3000
+Text Notes 4500 4600 0    50   ~ 0
+Limit voltage on COMP input \nto limit maximum PWM duty cycle
 $EndSCHEMATC
