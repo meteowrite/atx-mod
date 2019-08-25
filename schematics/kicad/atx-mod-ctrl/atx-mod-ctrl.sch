@@ -212,7 +212,7 @@ Wire Wire Line
 Wire Wire Line
 	8450 2800 8450 1750
 Wire Wire Line
-	8450 1750 4350 1750
+	8450 1750 6250 1750
 $Comp
 L Device:R R2
 U 1 1 5CECA129
@@ -293,4 +293,29 @@ VREF
 Connection ~ 4800 3000
 Text Notes 4500 4600 0    50   ~ 0
 Limit voltage on COMP input \nto limit maximum PWM duty cycle
+Wire Wire Line
+	6500 2800 6250 2800
+Wire Wire Line
+	6250 2800 6250 1750
+Connection ~ 6250 1750
+Wire Wire Line
+	6250 1750 4350 1750
+Wire Wire Line
+	6500 3100 6250 3100
+Wire Wire Line
+	6250 3100 6250 3200
+Wire Wire Line
+	6250 3200 6500 3200
+$Comp
+L power:GND #PWR?
+U 1 1 5D627AD3
+P 6250 3200
+F 0 "#PWR?" H 6250 2950 50  0001 C CNN
+F 1 "GND" H 6255 3027 50  0000 C CNN
+F 2 "" H 6250 3200 50  0001 C CNN
+F 3 "" H 6250 3200 50  0001 C CNN
+	1    6250 3200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 3200
 $EndSCHEMATC

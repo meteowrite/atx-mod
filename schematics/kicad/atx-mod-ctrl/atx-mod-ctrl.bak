@@ -139,10 +139,10 @@ Vout
 Wire Wire Line
 	1300 2750 1550 2750
 $Comp
-L Amplifier_Operational:LM358 U?
+L Amplifier_Operational:LM358 U2
 U 1 1 5CEB1773
 P 3150 3000
-F 0 "U?" H 3150 3367 50  0000 C CNN
+F 0 "U2" H 3150 3367 50  0000 C CNN
 F 1 "LM358" H 3150 3276 50  0000 C CNN
 F 2 "" H 3150 3000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3150 3000 50  0001 C CNN
@@ -150,10 +150,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3150 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM358 U?
+L Amplifier_Operational:LM358 U2
 U 2 1 5CEB1B35
 P 3100 4450
-F 0 "U?" H 3100 4817 50  0000 C CNN
+F 0 "U2" H 3100 4817 50  0000 C CNN
 F 1 "LM358" H 3100 4726 50  0000 C CNN
 F 2 "" H 3100 4450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3100 4450 50  0001 C CNN
@@ -161,10 +161,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3100 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM358 U?
+L Amplifier_Operational:LM358 U2
 U 3 1 5CEB2C58
 P 3300 1750
-F 0 "U?" H 3258 1796 50  0000 L CNN
+F 0 "U2" H 3258 1796 50  0000 L CNN
 F 1 "LM358" H 3258 1705 50  0000 L CNN
 F 2 "" H 3300 1750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3300 1750 50  0001 C CNN
@@ -172,10 +172,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3300 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D2
 U 1 1 5CEC0438
 P 3900 3000
-F 0 "D?" H 3900 3216 50  0000 C CNN
+F 0 "D2" H 3900 3216 50  0000 C CNN
 F 1 "1N4148" H 3900 3125 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3900 2825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3900 3000 50  0001 C CNN
@@ -183,10 +183,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3900 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D1
 U 1 1 5CEC2508
 P 3850 4450
-F 0 "D?" H 3850 4666 50  0000 C CNN
+F 0 "D1" H 3850 4666 50  0000 C CNN
 F 1 "1N4148" H 3850 4575 50  0000 C CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3850 4275 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3850 4450 50  0001 C CNN
@@ -214,10 +214,10 @@ Wire Wire Line
 Wire Wire Line
 	8450 1750 4350 1750
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5CECA129
 P 4350 2700
-F 0 "R?" H 4420 2746 50  0000 L CNN
+F 0 "R2" H 4420 2746 50  0000 L CNN
 F 1 "10k" H 4420 2655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4280 2700 50  0001 C CNN
 F 3 "~" H 4350 2700 50  0001 C CNN
@@ -229,10 +229,10 @@ Wire Wire Line
 Wire Wire Line
 	4350 1750 4350 2550
 $Comp
-L Transistor_BJT:BC557 Q?
+L Transistor_BJT:BC557 Q1
 U 1 1 5CECC989
 P 4900 3650
-F 0 "Q?" H 5091 3604 50  0000 L CNN
+F 0 "Q1" H 5091 3604 50  0000 L CNN
 F 1 "BC557" H 5091 3695 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5100 3575 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 4900 3650 50  0001 L CNN
@@ -261,10 +261,10 @@ Wire Wire Line
 Wire Wire Line
 	5200 3650 5200 3850
 $Comp
-L Device:LED D?
+L Device:LED D3
 U 1 1 5CED0BDB
 P 5200 4000
-F 0 "D?" V 5239 3883 50  0000 R CNN
+F 0 "D3" V 5239 3883 50  0000 R CNN
 F 1 "LED" V 5148 3883 50  0000 R CNN
 F 2 "" H 5200 4000 50  0001 C CNN
 F 3 "~" H 5200 4000 50  0001 C CNN
